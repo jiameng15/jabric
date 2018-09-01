@@ -158,3 +158,8 @@ orderer区块orderer服务的创世区块，并且channel交易文件在channel�
 
 ————————未完待续————————
 
+这部分，应该需要自己封装fabric-sdk来实现，思路是：
+
+把使用的chaincode名称存到交易信息中，
+
+通过hash找到区块信息，在区块信息中拿到交易ID，查到交易信息中的chaincode名称，调取对应的chaincode查看内容
